@@ -19,19 +19,21 @@ class ResultPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI Calculator'),
+        title: const Text('BMI Calculator'),
       ),
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Padding(
-              padding: EdgeInsets.only(top: 15.0),
-              child: Expanded(
-                child: Text(
-                  'Your Result',
-                  style: kSuperTextStyle,
-                ),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: const [
+                  Text(
+                    'Your Result',
+                    style: kSuperTextStyle,
+                  ),
+                ],
               ),
             ),
             Expanded(
@@ -45,7 +47,7 @@ class ResultPage extends StatelessWidget {
                     Text(
                       bmiResult.toUpperCase(),
                       textAlign: TextAlign.center,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Color(0xff00FF6C),
                         fontSize: 22.0,
                         fontWeight: FontWeight.bold,
@@ -54,7 +56,7 @@ class ResultPage extends StatelessWidget {
                     Text(
                       bmiCalculation,
                       textAlign: TextAlign.center,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 100.0,
                         fontWeight: FontWeight.bold,
                       ),
@@ -62,7 +64,7 @@ class ResultPage extends StatelessWidget {
                     Text(
                       bmiAdvice,
                       textAlign: TextAlign.center,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 22.0,
                       ),
                     ),
